@@ -11,7 +11,7 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="true">
 
                 <!-- ROLES Y PERMISO -->
-                @can('sidebar.roles.y.permisos')
+                @canany(['create','store','edit','delete'])
                  <li class="nav-item">
 
                      <a href="#" class="nav-link nav-">
@@ -42,7 +42,7 @@
                 @endcan
                  <li class="nav-item">
                         <a href="{{ route('clientes.index') }}" target="frameprincipal" class="nav-link">
-                            <i class="far fa-circle nav-icon"></i>
+                            <i class="fa fa-user-tie nav-icon"></i>
                         <p>clientes</p>
                         </a>
                 </li>
@@ -53,11 +53,15 @@
                         <p>Ver clima actual</p>
                     </a>
                 </li>
-
-
             </ul>
         </nav>
-
+        <form method="POST" action="{{ route('admin.logout') }}" class="logout-form">
+            @csrf
+            <button type="submit" class="nav-link btn btn-link logout-btn">
+                <i class="fas fa-sign-out-alt nav-icon"></i>
+                <p>Salir</p>
+            </button>
+        </form>
 
     </div>
 </aside>

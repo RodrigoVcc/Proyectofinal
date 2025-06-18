@@ -8,7 +8,7 @@
 
     <ul class="navbar-nav">
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="/panel" class="nav-link" style="color: white">crud</a>
+            <a href="/panel" class="nav-link" style="color: white">CRUD Clientes</a>
         </li>
     </ul>
 

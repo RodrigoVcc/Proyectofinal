@@ -18,27 +18,27 @@
 
                     <div class="form-group">
                         <label>Nombre</label>
-                        <input type="text" name="name" id="name" class="form-control" value="{{ $cliente->name }}" required>
+                        <input type="text" name="name" id="name" class="form-control" value="{{ $cliente->name }}" >
                     </div>
 
                     <div class="form-group">
                         <label>Teléfono</label>
-                        <input type="text" name="telefono" id="telefono" class="form-control" value="{{ $cliente->telefono }}" required>
+                        <input type="text" name="telefono" id="telefono" class="form-control" value="{{ $cliente->telefono }}" >
                     </div>
 
                     <div class="form-group">
                         <label>Correo</label>
-                        <input type="email" name="correo" id="correo" class="form-control" value="{{ $cliente->correo }}" required>
+                        <input type="email" name="correo" id="correo" class="form-control" value="{{ $cliente->correo }}" >
                     </div>
 
                     <div class="form-group">
                         <label>Dirección</label>
-                        <input type="text" name="direccion" id="direccion" class="form-control" value="{{ $cliente->direccion }}" required>
+                        <input type="text" name="direccion" id="direccion" class="form-control" value="{{ $cliente->direccion }}" >
                     </div>
 
                     <div class="form-group">
                         <label for="tipo">Tipo de Cliente:</label>
-                        <select id="tipo" name="tipo" class="form-control" required>
+                        <select id="tipo" name="tipo" class="form-control" >
                             <option value=""></option>
                             <option value="Nuevo" {{ $cliente->tipo == 'Nuevo' ? 'selected' : '' }}>Nuevo</option>
                             <option value="Frecuente" {{ $cliente->tipo == 'Frecuente' ? 'selected' : '' }}>Frecuente</option>

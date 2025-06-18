@@ -64,24 +64,26 @@
                     <td>{{ $cliente['tipo'] }}</td>
                     @canany(['create','store','delete','edit'])
                     <td>
-                        <form action="{{ route('clientes.destroy', $cliente->id) }}" method="post">
-                            @csrf
-                            @method('DELETE')
-                            <button type="button"
-                                data-id="{{ $cliente->id }}"
-                                onclick="confirmarEliminacion(this)"
-                                style="font-weight: bold; background-color: #ff4351; color: white !important;" 
-                                class="button button-rounded button-pill button-small">
-                                Eliminar
-                            </button>
+                            <div style="display: flex; gap: 8px;">
+                                <form action="{{ route('clientes.destroy', $cliente->id) }}" method="post">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="button"
+                                        data-id="{{ $cliente->id }}"
+                                        onclick="confirmarEliminacion(this)"
+                                        style="font-weight: bold; background-color: #ff4351; color: white !important;"
+                                        class="button button-rounded button-pill button-small">
+                                        Eliminar
+                                    </button>
+                                </form>
 
-                        </form>
+                                <a href="{{ route('clientes.edit', $cliente->id) }}"
+                                    style="font-weight: bold; background-color: #f0ad4e; color: white !important;"
+                                    class="button button-rounded button-pill button-small">
+                                    Editar
+                                </a>
+                            </div>
 
-                        <a href="{{ route('clientes.edit', $cliente->id) }}"
-                            style="font-weight: bold; background-color: #f0ad4e; color: white !important;" 
-                            class="button button-rounded button-pill button-small">
-                            Editar
-                        </a>
                     </td>
                     @endcanany
                 </tr>
